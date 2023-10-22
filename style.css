@@ -4,11 +4,17 @@
     box-sizing: border-box;
 }
 
+body{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 50%, rgba(0,212,255,1) 100%);
+}
+
 .date{
     text-align: center;
     font-size: 40px;
     font-weight: 600;
     margin: 20px 0;
+    color: aliceblue;
 }
 
 .form-control{
@@ -30,7 +36,17 @@ img{
 
 .card{
     padding: 20px;
+    box-shadow: 16px 12px 11px 2px rgba(221, 24, 24, 0.2);
+    transition: 1s;
 }
+
+.card:hover{
+    transform: scale(1.1);
+    transition: 1s;
+    
+}
+
+
 
 .form {
     display: flex;
