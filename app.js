@@ -10,9 +10,8 @@ const byTrain = document.querySelector('.by-train');
 const byPlane = document.querySelector('.by-plane');
 const form  = document.querySelector('.form');
 
-
-
-
+prompt('Where are you go..')
+alert('Ok')
 
 function dateOne(den){
     const now = new Date()
@@ -90,7 +89,7 @@ form.addEventListener('submit', (e)=> {
         const minutRes = Math.abs(minut * 60)
         const second = minutRes.toFixed(0)
         const secondRes = Math.abs(second - minutRes)
-        byCar.innerHTML = `${round   } hour ${minutRes.toFixed(0)} minute ${secondRes > 20 ? secondRes : ''}`
+        byCar.innerHTML = `${round > 0 ? round + ` hour`: ''  }   ${minutRes.toFixed(0)} minute ${secondRes > 20 ? secondRes : ''}`
     }
 
     if (5000 > valInput ) {
@@ -104,7 +103,7 @@ form.addEventListener('submit', (e)=> {
         const minutRes = Math.abs(minut * 60)
         const second = minutRes.toFixed(0)
         const secondRes = Math.abs(second - minutRes)
-        byTrain.innerHTML = `${round } hour ${minutRes.toFixed(0)} minute ${secondRes > 20 ? secondRes : ''}`
+        byTrain.innerHTML = `${round > 0 ? round + ` hour`: ''  }   ${minutRes.toFixed(0)} minute ${secondRes > 20 ? secondRes : ''}`
     }
 
     if (5000 > valInput ) {
@@ -120,10 +119,5 @@ form.addEventListener('submit', (e)=> {
         const secondRes = Math.abs(second - minutRes)
         byPlane.innerHTML = `${round > 0 ? round + ` hour`: ''  }   ${minutRes.toFixed(0)} minute ${secondRes > 20 ? secondRes : ''}`
     }
-    
-    
-
-
-
     form.reset()
 })
